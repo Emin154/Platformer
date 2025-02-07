@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | 2D platformer</title>
-<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
-      vkBridge.send("VKWebAppInit", {});
-    </script>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -36,7 +32,6 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
-
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -64,9 +59,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Platformer.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Platformer.data.br",
-        frameworkUrl: buildUrl + "/Platformer.framework.js.br",
-        codeUrl: buildUrl + "/Platformer.wasm.br",
+        dataUrl: buildUrl + "/Platformer.data.unityweb",
+        frameworkUrl: buildUrl + "/Platformer.framework.js.unityweb",
+        codeUrl: buildUrl + "/Platformer.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "2D platformer",
